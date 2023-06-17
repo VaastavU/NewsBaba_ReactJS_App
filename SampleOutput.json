@@ -1,0 +1,32 @@
+{
+    "status": "ok",
+    "totalResults": 2,
+    "articles": [
+      {
+        "source": {
+          "id": null,
+          "name": "The Action Network"
+        },
+        "author": "Darren Rovell",
+        "title": "Fanatics Acquires PointsBet's U.S. Business, Marking Its Official Foray Into Sports Betting - The Action Network",
+        "description": "Read about how Fanatics acquired PointsBet for $150 million on Sunday.",
+        "url": "https://www.actionnetwork.com/legal-online-sports-betting/fanatics-acquires-pointsbet",
+        "urlToImage": "https://images.actionnetwork.com/blog/2022/05/fanatics.jpg",
+        "publishedAt": "2023-05-15T03:20:00Z",
+        "content": null
+      },
+      {
+        "source": {
+          "id": null,
+          "name": "Sports Illustrated"
+        },
+        "author": "Karl Rasmussen",
+        "title": "Ben Simmons Trolls 76ers After Their Game 7 Loss to Celtics - Sports Illustrated",
+        "description": "The Brooklyn Nets guard took to Instagram in the waning moments of the Sixers’ season-ending loss.",
+        "url": "https://www.si.com/extra-mustard/2023/05/15/ben-simmons-trolls-76ers-after-their-game-7-loss-to-celtics",
+        "urlToImage": "https://www.si.com/.image/ar_1.91%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_1200/MTk3OTUwNTg5NTk2ODcwNTE4/bensimmons.jpg",
+        "publishedAt": "2023-05-15T00:12:52Z",
+        "content": "The 76ers were defeated by the Celtics in the second round of the playoffs, losing in Game 7 in what was ultimately a blowout. \r\nIt seems ex-Sixers guard Ben Simmons, who left the team on bad terms w… [+1327 chars]"
+      }
+    ]
+  }
