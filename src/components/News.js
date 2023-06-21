@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import NewsItem from "./NewsItem";
-import Spinner from "./Spinner";
 import PropTypes from "prop-types";
 import InfiniteScroll from "react-infinite-scroll-component";
 
@@ -23,7 +22,6 @@ export class News extends Component {
         super(props);
         this.state = {
             articles: this.articles,
-            // loading: true,
             page: 1,
             totalResults: 0,
         };
@@ -31,7 +29,7 @@ export class News extends Component {
     }
     async uppdate() {
         this.props.setProgress(10);
-        const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=8085212029df40b28a6c2e2581f6c727&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+        const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
         this.setState({ loading: true });
         let data = await fetch(url);
         this.props.setProgress(30);
@@ -47,18 +45,10 @@ export class News extends Component {
     async componentDidMount() {
         this.uppdate();
     }
-    // handleNextClick = async () => {
-    //     this.setState({ page: this.state.page + 1 });
-    //     this.uppdate();
-    // };
-    // handlePrevClick = async () => {
-    //     this.setState({ page: this.state.page - 1 });
-    //     this.uppdate();
-    // };
     fetchMoreData = async () => {
         this.props.setProgress(10);
         this.setState({ page: this.state.page + 1 });
-        const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=8085212029df40b28a6c2e2581f6c727&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+        const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
         let data = await fetch(url);
         this.props.setProgress(30);
         let parsedData = await data.json();
@@ -75,7 +65,6 @@ export class News extends Component {
                 <h1 className='text-center' style={{ margin: "40px 0px" }}>
                     NewsBaba: Top {this.capitalize(this.props.category)} Headlines
                 </h1>
-                {this.state.loading && <Spinner />}
                 <InfiniteScroll dataLength={this.state.articles.length} next={this.fetchMoreData} hasMore={this.state.articles.length !== this.state.totalResults}>
                     <div className='container'>
                         <div className='row my-6'>
